@@ -1,0 +1,130 @@
+*{
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+section{
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+.puntajes{
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.puntajes h2{
+    font-size: 30px;
+}
+
+.puntajes p{
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.tablero button{
+    width: 100px;
+    height: 100px;
+    font-size: 20px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #ff0000;
+    border-radius: 50px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-animation: all 0.3s;
+    transition: all 0.3s;
+}
+
+.tablero button:hover{
+    background-color: blueviolet;
+    border-color: blue;
+}
+.tablero button:focus{
+    outline: 0;
+}
+.tablero button img{
+    height: 50px;
+}
+
+.tablero{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity(0.5s ease 0.5s);
+}
+.manos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.manos img{
+    width: 250px;
+}
+.manos.opciones{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.opciones{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.resultado{
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 1 rem;
+}
+
+@media only screen and (max-width: 760){
+    .manos img{
+        width: 150px;
+    }
+    .puntajes{
+        font-size: 18px;
+    }
+    .resultado{
+        font-size: 20px;
+    }
+    .tablero button{
+        width: 80px;
+        height: 80px;
+    }
+
+    @keyframes mover {
+        0%{
+            transform: translateY(0px);
+        }
+        15%{
+            transform: translateY(-25%);
+        }
+        25%{
+            transform: translateY(0%);
+        }
+        35%{
+            transform: translateY(-25%);
+        }
+        50%{
+            transform: translateY(0%);
+        }
+        65%{
+            transform: translateY(-25%);
+        }
+        75%{
+            transform: translateY(0%);
+        }
+
+    }
+}
